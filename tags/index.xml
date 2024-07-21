@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on The academic website of Yongqiang Gong</title>
+    <link>//localhost:4321/tags/</link>
+    <description>Recent content in Tags on The academic website of Yongqiang Gong</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:4321/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hospital</title>
+      <link>//localhost:4321/tags/hospital/</link>
+      <pubDate>Sun, 14 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/tags/hospital/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Study</title>
+      <link>//localhost:4321/tags/study/</link>
+      <pubDate>Sun, 14 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/tags/study/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Laboratory</title>
+      <link>//localhost:4321/tags/laboratory/</link>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/tags/laboratory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Analysis</title>
+      <link>//localhost:4321/tags/analysis/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/tags/analysis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Codes</title>
+      <link>//localhost:4321/tags/codes/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/tags/codes/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

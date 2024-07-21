@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=443&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TCGA：如何下载SNP数据？ | The academic website of Yongqiang Gong</title>
+    <link rel="stylesheet" href="../../../../../css/style.css" />
+    <link rel="stylesheet" href="../../../../../css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="../../../../../">Home</a></li>
+      
+      <li><a href="../../../../../about/">Tools</a></li>
+      
+      <li><a href="../../../../../categories/">Categories</a></li>
+      
+      <li><a href="../../../../../tags/">Tags</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">TCGA：如何下载SNP数据？</span></h1>
+<h2 class="author">Jenking Gong</h2>
+<h2 class="date">2024/07/03</h2>
+</div>
+
+<main>
+<hr>
+<h4 id="欢迎回来我的朋友们今天我们继续更新tcga数据库的相关内容">欢迎回来，我的朋友们。今天我们继续更新TCGA数据库的相关内容。</h4>
+<hr>
+<h4 id="首先先加载我写好的函数用于下载snp数据的">首先先加载我写好的函数，用于下载SNP数据的。</h4>
+<hr>
+<pre><code class="language-r">tcga_snp &lt;- function(x){
+  y &lt;- str_c(&quot;TCGA-&quot;,x)
+  query_snp &lt;- TCGAbiolinks::GDCquery(
+    project = y,
+    data.category = &quot;Simple Nucleotide Variation&quot;,
+    data.type = &quot;Masked Somatic Mutation&quot;,
+    access = &quot;open&quot;
+  )
+  TCGAbiolinks::GDCdownload(query_snp)
+  snp &lt;- TCGAbiolinks::GDCprepare(query_snp)
+  message(&quot;体细胞突变数据下载成功！(nkyqgong)&quot;)
+  return(snp)
+}
+</code></pre>
+<hr>
+<h4 id="接下来我们开始实战操作例子是kirp项目大家自己选择项目就可以">接下来我们开始实战操作，例子是KIRP项目，大家自己选择项目就可以。</h4>
+<hr>
+<pre><code class="language-r">library(tidyverse)
+project &lt;- &quot;KIRP&quot;
+snp &lt;- tcga_snp(project)
+</code></pre>
+<hr>
+<h4 id="接下来我们安心等待结果就可以了本期结束">接下来我们安心等待结果就可以了。本期结束！</h4>
+
+</main>
+
+  <footer>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<script src="//cdn.jsdelivr.net/combine/npm/katex/dist/katex.min.js,npm/katex/dist/contrib/auto-render.min.js,npm/@xiee/utils/js/render-katex.js" defer></script>
+
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
+
+  
+  <hr/>
+  © <a href="https://github.com/YongqiangGong/figures/blob/5b3c996d061adef3e2f1320440bd7b5eb3e66b8d/Yongqiang%20Gong.jpg">Yongqiang Gong</a> 2024 &ndash; 2024 | <a href="https://github.com/YongqiangGong">Github</a> | <a href="mailto:2796595606@qq.com">QQ</a> | <a href="https://github.com/YongqiangGong/figures/blob/a017ff91f94739f498027858f57a6cf9f287fb41/WeChat.jpg">WeChat</a>|<a href="mailto:gongyq@mail.nankai.edu.cn">Email</a>
+  
+  </footer>
+  </body>
+</html>
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=443&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TCGA：迅速转换基因ID | The academic website of Yongqiang Gong</title>
+    <link rel="stylesheet" href="../../../../../css/style.css" />
+    <link rel="stylesheet" href="../../../../../css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="../../../../../">Home</a></li>
+      
+      <li><a href="../../../../../about/">Tools</a></li>
+      
+      <li><a href="../../../../../categories/">Categories</a></li>
+      
+      <li><a href="../../../../../tags/">Tags</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">TCGA：迅速转换基因ID</span></h1>
+<h2 class="author">Jenking Gong</h2>
+<h2 class="date">2024/07/03</h2>
+</div>
+
+<main>
+<hr>
+<h4 id="欢迎回来我的朋友们今天我们继续更新tcga数据库的相关内容">欢迎回来，我的朋友们。今天我们继续更新TCGA数据库的相关内容。</h4>
+<hr>
+<h4 id="话不多说来到正题首先先加载我写好的函数用于转换基因id">话不多说，来到正题。首先先加载我写好的函数，用于转换基因ID。</h4>
+<hr>
+<pre><code class="language-r">tcga_cbind &lt;- function(counts){
+  mrna &lt;- counts$mrna
+  lnc &lt;- counts$lnc
+  mrna &lt;- cbind(mrna,counts$symbol_mrna) %&gt;% 
+    select(-ensembl) %&gt;% 
+    select(gene,everything())
+  lnc &lt;- cbind(lnc,counts$symbol_lnc) %&gt;% 
+    select(-ensembl) %&gt;% 
+    select(gene,everything())
+  result &lt;- list(mrna=mrna,lnc=lnc)
+  return(result)
+}
+</code></pre>
+<hr>
+<h4 id="接下来我们就要用到之前保存的数据了下面我把前几期用到的函数整理一下直接运行下载就可以">接下来我们就要用到之前保存的数据了，下面我把前几期用到的函数整理一下，直接运行下载就可以。</h4>
+<hr>
+<pre><code class="language-r">counts &lt;- tcga_download(project)
+counts &lt;- tcga_cbind(counts)
+clinical &lt;- tcga_clinical(project)
+snp &lt;- tcga_snp(project)
+save(counts,snp,clinical,
+     file = &quot;Data.Rda&quot;)
+</code></pre>
+<hr>
+<h4 id="运行之后我们就可以得到整理好的原始数据了并且保存下来下一期会给大家整理怎么过滤矩阵提取重要的临床数据">运行之后我们就可以得到整理好的原始数据了并且保存下来，下一期会给大家整理怎么过滤矩阵，提取重要的临床数据。</h4>
+
+</main>
+
+  <footer>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<script src="//cdn.jsdelivr.net/combine/npm/katex/dist/katex.min.js,npm/katex/dist/contrib/auto-render.min.js,npm/@xiee/utils/js/render-katex.js" defer></script>
+
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
+
+  
+  <hr/>
+  © <a href="https://github.com/YongqiangGong/figures/blob/5b3c996d061adef3e2f1320440bd7b5eb3e66b8d/Yongqiang%20Gong.jpg">Yongqiang Gong</a> 2024 &ndash; 2024 | <a href="https://github.com/YongqiangGong">Github</a> | <a href="mailto:2796595606@qq.com">QQ</a> | <a href="https://github.com/YongqiangGong/figures/blob/a017ff91f94739f498027858f57a6cf9f287fb41/WeChat.jpg">WeChat</a>|<a href="mailto:gongyq@mail.nankai.edu.cn">Email</a>
+  
+  </footer>
+  </body>
+</html>
+

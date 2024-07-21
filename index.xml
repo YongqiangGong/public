@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on The academic website of Yongqiang Gong</title>
+    <link>//localhost:4321/</link>
+    <description>Recent content in Home on The academic website of Yongqiang Gong</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:4321/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>实验室小记（2）</title>
+      <link>//localhost:4321/post/2024/07/16/2/</link>
+      <pubDate>Tue, 16 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2024/07/16/2/</guid>
+      <description>在实验室也是带过一段时间了，实验室的氛围也是相当不错的，师兄师姐们对我很好。当然，也是碰到了一些同学，还认识了新的朋友。&#xA;目前在复现师兄之前做过的一种材料，但是第一次实验成功的失败了，现在在重复实验，估计也不会成功，因为我的酶似乎加的有点早了，在4°状态保存下了两个小时才进行了下一步。&#xA;在搞一篇生信的文章，主要是关于肾透明细胞癌的，但是师父似乎没有相关的样本，现在也不知道怎么办才好。晚上师父说看看可不可以换成结直肠癌的，因为有现成的样本，打算先把代码跑一遍，然后再换成结直肠癌的，毕竟现在肾透明细胞癌的已经差不多了，还筛出来了一个靶点，如果不再深入研究的话，反而有一些浪费。&#xA;晚上师兄带着我做了一下细胞培养里面的细胞换液，自己也培养了一些细胞。就先这样吧，我还要买一根老冰棍吃，笑死。</description>
+    </item>
+    <item>
+      <title>三中心见习有感（2）</title>
+      <link>//localhost:4321/post/2024/07/14/2/</link>
+      <pubDate>Sun, 14 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2024/07/14/2/</guid>
+      <description>两周的见习终于是结束了，但怎么还有一些恋恋不舍呢，难道是因为我太贱了？不可能，绝对不可能，肯定是因为老师们太好了。谁家老师在学生们进教室前，提前打开空调呢。&#xA;好吧好吧，终于还是结束了，最后还拍了一张毕业照，笑死我了，当时头发特别乱，特别没精神。感觉以后有机会还是会去的，体格检查和心电图还是要仔细学学的，感觉这些东西还是非常重要的。周六周日还是要继续去实验室跟随师兄师姐学习的。早上起来感觉头发有一些乱，打算先去理个发。</description>
+    </item>
+    <item>
+      <title>7月9日晚杂记</title>
+      <link>//localhost:4321/post/2024/07/10/7-9/</link>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2024/07/10/7-9/</guid>
+      <description>哦对了，好久没有更新公众号了，有好几个系列都断掉了，见习就要结束，也是时候重新开始更新了。&#xA;英语六级还是要考一遍的，但是看样子难度不小，虽然已经考过一遍并且勉强过了。不知道下一次怎么样，本来打算暑假前考的，但是看样子不行，因为在期末周里面，时间根本来不及。&#xA;最近打算研究研究分子和细胞，也不买书了，在微信图书馆公众号里面找了几本心仪的书，直接去图书馆吧，真是没有办法。 好吧好吧，希望一切来得及。</description>
+    </item>
+    <item>
+      <title>实验室小记（1）</title>
+      <link>//localhost:4321/post/2024/07/10/1/</link>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2024/07/10/1/</guid>
+      <description>好吧好吧看样子暑假可以在导师的实验室里面做些实验了，美滋滋。难度比较大的实验肯定是不可能了，导师简单操作还是可以的，没准还能蹭一蹭师兄师姐的实验，跟着做一做。&#xA;三中心见习还有一周，过得还是挺快的。导师安排的实验应该是从前师兄做过的，主要是一种DNA纳米材料，但我不是特别感兴趣，虽然做实验挺有意思的。我还是喜欢研究研究基因什么的东西，毕竟会用R做做分析什么的。&#xA;师兄还是非常负责任的，告诉了我操作的步骤。周六下午有师姐做Western blot，师兄就叫我过去了，跟着师姐做实验，没想到这种研究蛋白的简单实验都这么复杂，真是没想到，后续没准会把这个实验的基本步骤和流程写下来，放到博客和我的公众号上面，我的公众号就叫做Jenking Gong。这个英文名字我在初中就开始用了，记得当时Jenking好像有战神的意思？记不太清了，当然这并不重要，我现在许多软件的名字都用Jenking Gong，或许以后有身份有地位后这个名字会大放异彩，现在就不太可能了。&#xA;下礼拜周六师兄让我做做凝胶？好像是这个东西，记不太清了，到时候再说吧。实验室的氛围还是相当不错的，比较友好和平和。但是到现在还没见到导师，一直都是微信联系，笑死我了。&#xA;哦对了，顺便又开发了一个关于富集分析的小程序，主要就是GO和KEGG，当然是比较慢的，但是操作比较简单。&#xA;今天就先这样吧。</description>
+    </item>
+    <item>
+      <title>三中心见习有感（1）</title>
+      <link>//localhost:4321/post/2024/07/08/1/</link>
+      <pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2024/07/08/1/</guid>
+      <description>好吧，每年暑假的见习终究还是来了，虽然知道不能逃掉。按理来说每年的暑假都应该去医院见习，但是疫情原因导致我目前只去过一次医院见习。记得我上次应该是在一中心的耳鼻喉科的头颈外科吧，当时病房里面主要是肿瘤病人，没错，就是癌症。还跟着看了几台手术，印象比较深刻的是全喉切除。&#xA;这次是去三中心见习，医院倒是没什么，就是距离学校太远了，大概10公里左右吧。不下雨的话就骑电动车去，下雨就打出租，没办法的事情。本来是想去人民医院的，谁知道抢的人太多了，人脑袋差点打出狗脑袋出来，谁知道会这样。心里一想，那就算了，去三中心就去三中心吧，也没什么不好的，万一以后在三中心工作了呢？让我先做梦一下。&#xA;到了医院后，发现叫见习不太准确，应该叫做技能培训，学到的东西应该以后在执业医师考试的时候会考到，所以先好好学学吧，也没什么坏处，对吧？老师们还是非常不错的，至少对我们来说，我们的老学长黎主任也经常来看我们，对我们进行一些指导，受益匪浅。至少我觉得这次学到的东西要比上次在一中心学到的东西多，而且老师们也非常负责。&#xA;考核了一些学到的东西，主要是心肺复苏、妇科检查和腰椎穿刺。心肺复苏我觉得还是非常重要的，毕竟普通人也可以用到，记得和我妈妈聊天的时候，当地有个六十多的老太太就是因为心梗去世的，如果能够及时心肺复苏的话，没准可以活下来。&#xA;一周的时光还是很快的，哦对了，要吐槽一下医院的食堂菜价还是挺贵的，超出了我的预料，不太理解。下一周好像有什么儿科技能，到时候看看难度怎么样。周六周日要去实验室找师兄师姐跟着做做实验，希望实验结果符合预期，不然要重新做了。&#xA;先这样吧。</description>
+    </item>
+    <item>
+      <title>TCGA：如何下载SNP数据？</title>
+      <link>//localhost:4321/post/2024/07/03/tcga-snp/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2024/07/03/tcga-snp/</guid>
+      <description> 欢迎回来，我的朋友们。今天我们继续更新TCGA数据库的相关内容。 首先先加载我写好的函数，用于下载SNP数据的。 tcga_snp &amp;lt;- function(x){ y &amp;lt;- str_c(&amp;quot;TCGA-&amp;quot;,x) query_snp &amp;lt;- TCGAbiolinks::GDCquery( project = y, data.category = &amp;quot;Simple Nucleotide Variation&amp;quot;, data.type = &amp;quot;Masked Somatic Mutation&amp;quot;, access = &amp;quot;open&amp;quot; ) TCGAbiolinks::GDCdownload(query_snp) snp &amp;lt;- TCGAbiolinks::GDCprepare(query_snp) message(&amp;quot;体细胞突变数据下载成功！(nkyqgong)&amp;quot;) return(snp) } 接下来我们开始实战操作，例子是KIRP项目，大家自己选择项目就可以。 library(tidyverse) project &amp;lt;- &amp;quot;KIRP&amp;quot; snp &amp;lt;- tcga_snp(project) 接下来我们安心等待结果就可以了。本期结束！ </description>
+    </item>
+    <item>
+      <title>TCGA：如何快速下载临床数据？</title>
+      <link>//localhost:4321/post/2024/07/03/tcga/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2024/07/03/tcga/</guid>
+      <description> 欢迎回来，我的朋友们。今天我们继续更新TCGA数据库的相关内容，或许下午会更新一些关于基础科研系列的文章，大家拭目以待。 话不多说，来到正题。首先先加载我写好的函数，用于下载临床数据的。 tcga_clinical &amp;lt;- function(x){ y &amp;lt;- str_c(&amp;quot;TCGA-&amp;quot;,x) clin.coad &amp;lt;- TCGAbiolinks::GDCquery_clinic(y, &amp;quot;clinical&amp;quot;) clinical &amp;lt;- clin.coad message(&amp;quot;临床数据下载成功！(nkyqgong)&amp;quot;) return(clinical) } 接下来我们开始实战操作，例子是KIRP项目，大家自己选择项目就可以。 library(tidyverse) project &amp;lt;- &amp;quot;KIRP&amp;quot; clinical &amp;lt;- tcga_clinical(project) 接下来我们安心等待结果就可以了，是不是很简单呢？下一期我们更新上次得到的Counts数据怎么转换基因ID的相关内容，也是一个函数就解决掉。 </description>
+    </item>
+    <item>
+      <title>TCGA：快速下载Counts矩阵数据</title>
+      <link>//localhost:4321/post/2024/07/03/tcga-counts/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2024/07/03/tcga-counts/</guid>
+      <description>好久不见了，各位朋友！有没有想念Jenking呢？Jenking最近在忙着考试的事情，的确没有太多的时间，但是接下来一阵子就会比较空闲了，争取每天更新！ 接下来的几期内容是关于如何下载TCGA数据并进行简单整理的，Jenking写了几个简单的函数，大家可以直接在自己的项目里面用，当然也借鉴了其他一些大佬们的代码。 让我们开始正题吧！首先加载我们写好的函数。 tcga_download &amp;lt;- function(name){ x &amp;lt;- str_c(&amp;quot;TCGA-&amp;quot;,name) query_expr &amp;lt;- TCGAbiolinks::GDCquery(project = x, data.category = &amp;quot;Transcriptome Profiling&amp;quot;, data.type = &amp;quot;Gene Expression Quantification&amp;quot;, workflow.type = &amp;quot;STAR - Counts&amp;quot; ) TCGAbiolinks::GDCdownload(query_expr) expr &amp;lt;- TCGAbiolinks::GDCprepare(query_expr) se &amp;lt;- expr rowdata &amp;lt;- SummarizedExperiment::rowData(se) se_mrna &amp;lt;- se[rowdata$gene_type == &amp;quot;protein_coding&amp;quot;,] se_lnc &amp;lt;- se[rowdata$gene_type == &amp;quot;lncRNA&amp;quot;] mrna_counts &amp;lt;- SummarizedExperiment::assay(se_mrna,&amp;quot;unstranded&amp;quot;) lnc_counts &amp;lt;- SummarizedExperiment::assay(se_lnc,&amp;quot;unstranded&amp;quot;) mrna &amp;lt;- SummarizedExperiment::rowData(se_mrna)$gene_name lnc &amp;lt;- SummarizedExperiment::rowData(se_lnc)$gene_name symbol_mrna &amp;lt;- data.frame(gene=mrna) %&amp;gt;% cbind(.,mrna_counts) %&amp;gt;% rownames_to_column(var = &amp;quot;ensembl&amp;quot;) %&amp;gt;% select(1:2) symbol_lnc &amp;lt;- data.</description>
+    </item>
+    <item>
+      <title>TCGA：迅速转换基因ID</title>
+      <link>//localhost:4321/post/2024/07/03/tcga-id/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2024/07/03/tcga-id/</guid>
+      <description> 欢迎回来，我的朋友们。今天我们继续更新TCGA数据库的相关内容。 话不多说，来到正题。首先先加载我写好的函数，用于转换基因ID。 tcga_cbind &amp;lt;- function(counts){ mrna &amp;lt;- counts$mrna lnc &amp;lt;- counts$lnc mrna &amp;lt;- cbind(mrna,counts$symbol_mrna) %&amp;gt;% select(-ensembl) %&amp;gt;% select(gene,everything()) lnc &amp;lt;- cbind(lnc,counts$symbol_lnc) %&amp;gt;% select(-ensembl) %&amp;gt;% select(gene,everything()) result &amp;lt;- list(mrna=mrna,lnc=lnc) return(result) } 接下来我们就要用到之前保存的数据了，下面我把前几期用到的函数整理一下，直接运行下载就可以。 counts &amp;lt;- tcga_download(project) counts &amp;lt;- tcga_cbind(counts) clinical &amp;lt;- tcga_clinical(project) snp &amp;lt;- tcga_snp(project) save(counts,snp,clinical, file = &amp;quot;Data.Rda&amp;quot;) 运行之后我们就可以得到整理好的原始数据了并且保存下来，下一期会给大家整理怎么过滤矩阵，提取重要的临床数据。 </description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>//localhost:4321/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/about/</guid>
+      <description>龚永强在无聊的时候开发了一些Shiny Apps，或许对你会有一些帮助。&#xA;List -Venn Diagram&#xA;-Gene-ID Transform&#xA;-Pubmed Hotspot&#xA;-GO/KEGG Enrichment Analysis&#xA;Description -Venn Diagram：你可以使用它绘制韦恩图并且下载，最多可以上传4个数据集进行绘制，可以更改标题和百分比大小。下载时速度比较慢，因为设置的清晰度比较高。（注意输入形式用逗号或者空格隔开）&#xA;-Gene-ID Transform：你可以使用它转换基因ID，主要包括四种形式（Symbol，Ensembl，Entrezid和Gene Name），转换成功后可以下载列表。（注意输入形式用逗号或者空格隔开）&#xA;-Pubmed Hotspot：你可以用它查找Pubmed相关关键词出现的次数，对你的研究或许会有一些启发。输入你的关键词和想要查找的期刊，跳出相关关键词，你可以设置最大文章量以及要查找的时间范围。&#xA;-GO/KEGG Enrichment Analysis：你可以利用它进行GO/KEGG分析，并且提供了简单的柱形图和气泡图，结果可以下载下来进行下一步分析。（注意输入形式用逗号或者空格隔开）</description>
+    </item>
+  </channel>
+</rss>

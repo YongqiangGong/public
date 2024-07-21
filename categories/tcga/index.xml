@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TCGA on The academic website of Yongqiang Gong</title>
+    <link>//localhost:4321/categories/tcga/</link>
+    <description>Recent content in TCGA on The academic website of Yongqiang Gong</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:4321/categories/tcga/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TCGA：如何下载SNP数据？</title>
+      <link>//localhost:4321/post/2024/07/03/tcga-snp/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2024/07/03/tcga-snp/</guid>
+      <description> 欢迎回来，我的朋友们。今天我们继续更新TCGA数据库的相关内容。 首先先加载我写好的函数，用于下载SNP数据的。 tcga_snp &amp;lt;- function(x){ y &amp;lt;- str_c(&amp;quot;TCGA-&amp;quot;,x) query_snp &amp;lt;- TCGAbiolinks::GDCquery( project = y, data.category = &amp;quot;Simple Nucleotide Variation&amp;quot;, data.type = &amp;quot;Masked Somatic Mutation&amp;quot;, access = &amp;quot;open&amp;quot; ) TCGAbiolinks::GDCdownload(query_snp) snp &amp;lt;- TCGAbiolinks::GDCprepare(query_snp) message(&amp;quot;体细胞突变数据下载成功！(nkyqgong)&amp;quot;) return(snp) } 接下来我们开始实战操作，例子是KIRP项目，大家自己选择项目就可以。 library(tidyverse) project &amp;lt;- &amp;quot;KIRP&amp;quot; snp &amp;lt;- tcga_snp(project) 接下来我们安心等待结果就可以了。本期结束！ </description>
+    </item>
+    <item>
+      <title>TCGA：如何快速下载临床数据？</title>
+      <link>//localhost:4321/post/2024/07/03/tcga/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2024/07/03/tcga/</guid>
+      <description> 欢迎回来，我的朋友们。今天我们继续更新TCGA数据库的相关内容，或许下午会更新一些关于基础科研系列的文章，大家拭目以待。 话不多说，来到正题。首先先加载我写好的函数，用于下载临床数据的。 tcga_clinical &amp;lt;- function(x){ y &amp;lt;- str_c(&amp;quot;TCGA-&amp;quot;,x) clin.coad &amp;lt;- TCGAbiolinks::GDCquery_clinic(y, &amp;quot;clinical&amp;quot;) clinical &amp;lt;- clin.coad message(&amp;quot;临床数据下载成功！(nkyqgong)&amp;quot;) return(clinical) } 接下来我们开始实战操作，例子是KIRP项目，大家自己选择项目就可以。 library(tidyverse) project &amp;lt;- &amp;quot;KIRP&amp;quot; clinical &amp;lt;- tcga_clinical(project) 接下来我们安心等待结果就可以了，是不是很简单呢？下一期我们更新上次得到的Counts数据怎么转换基因ID的相关内容，也是一个函数就解决掉。 </description>
+    </item>
+    <item>
+      <title>TCGA：快速下载Counts矩阵数据</title>
+      <link>//localhost:4321/post/2024/07/03/tcga-counts/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2024/07/03/tcga-counts/</guid>
+      <description>好久不见了，各位朋友！有没有想念Jenking呢？Jenking最近在忙着考试的事情，的确没有太多的时间，但是接下来一阵子就会比较空闲了，争取每天更新！ 接下来的几期内容是关于如何下载TCGA数据并进行简单整理的，Jenking写了几个简单的函数，大家可以直接在自己的项目里面用，当然也借鉴了其他一些大佬们的代码。 让我们开始正题吧！首先加载我们写好的函数。 tcga_download &amp;lt;- function(name){ x &amp;lt;- str_c(&amp;quot;TCGA-&amp;quot;,name) query_expr &amp;lt;- TCGAbiolinks::GDCquery(project = x, data.category = &amp;quot;Transcriptome Profiling&amp;quot;, data.type = &amp;quot;Gene Expression Quantification&amp;quot;, workflow.type = &amp;quot;STAR - Counts&amp;quot; ) TCGAbiolinks::GDCdownload(query_expr) expr &amp;lt;- TCGAbiolinks::GDCprepare(query_expr) se &amp;lt;- expr rowdata &amp;lt;- SummarizedExperiment::rowData(se) se_mrna &amp;lt;- se[rowdata$gene_type == &amp;quot;protein_coding&amp;quot;,] se_lnc &amp;lt;- se[rowdata$gene_type == &amp;quot;lncRNA&amp;quot;] mrna_counts &amp;lt;- SummarizedExperiment::assay(se_mrna,&amp;quot;unstranded&amp;quot;) lnc_counts &amp;lt;- SummarizedExperiment::assay(se_lnc,&amp;quot;unstranded&amp;quot;) mrna &amp;lt;- SummarizedExperiment::rowData(se_mrna)$gene_name lnc &amp;lt;- SummarizedExperiment::rowData(se_lnc)$gene_name symbol_mrna &amp;lt;- data.frame(gene=mrna) %&amp;gt;% cbind(.,mrna_counts) %&amp;gt;% rownames_to_column(var = &amp;quot;ensembl&amp;quot;) %&amp;gt;% select(1:2) symbol_lnc &amp;lt;- data.</description>
+    </item>
+    <item>
+      <title>TCGA：迅速转换基因ID</title>
+      <link>//localhost:4321/post/2024/07/03/tcga-id/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2024/07/03/tcga-id/</guid>
+      <description> 欢迎回来，我的朋友们。今天我们继续更新TCGA数据库的相关内容。 话不多说，来到正题。首先先加载我写好的函数，用于转换基因ID。 tcga_cbind &amp;lt;- function(counts){ mrna &amp;lt;- counts$mrna lnc &amp;lt;- counts$lnc mrna &amp;lt;- cbind(mrna,counts$symbol_mrna) %&amp;gt;% select(-ensembl) %&amp;gt;% select(gene,everything()) lnc &amp;lt;- cbind(lnc,counts$symbol_lnc) %&amp;gt;% select(-ensembl) %&amp;gt;% select(gene,everything()) result &amp;lt;- list(mrna=mrna,lnc=lnc) return(result) } 接下来我们就要用到之前保存的数据了，下面我把前几期用到的函数整理一下，直接运行下载就可以。 counts &amp;lt;- tcga_download(project) counts &amp;lt;- tcga_cbind(counts) clinical &amp;lt;- tcga_clinical(project) snp &amp;lt;- tcga_snp(project) save(counts,snp,clinical, file = &amp;quot;Data.Rda&amp;quot;) 运行之后我们就可以得到整理好的原始数据了并且保存下来，下一期会给大家整理怎么过滤矩阵，提取重要的临床数据。 </description>
+    </item>
+  </channel>
+</rss>

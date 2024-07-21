@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Laboratory on The academic website of Yongqiang Gong</title>
+    <link>//localhost:4321/tags/laboratory/</link>
+    <description>Recent content in Laboratory on The academic website of Yongqiang Gong</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:4321/tags/laboratory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>实验室小记（1）</title>
+      <link>//localhost:4321/post/2024/07/10/1/</link>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2024/07/10/1/</guid>
+      <description>好吧好吧看样子暑假可以在导师的实验室里面做些实验了，美滋滋。难度比较大的实验肯定是不可能了，导师简单操作还是可以的，没准还能蹭一蹭师兄师姐的实验，跟着做一做。&#xA;三中心见习还有一周，过得还是挺快的。导师安排的实验应该是从前师兄做过的，主要是一种DNA纳米材料，但我不是特别感兴趣，虽然做实验挺有意思的。我还是喜欢研究研究基因什么的东西，毕竟会用R做做分析什么的。&#xA;师兄还是非常负责任的，告诉了我操作的步骤。周六下午有师姐做Western blot，师兄就叫我过去了，跟着师姐做实验，没想到这种研究蛋白的简单实验都这么复杂，真是没想到，后续没准会把这个实验的基本步骤和流程写下来，放到博客和我的公众号上面，我的公众号就叫做Jenking Gong。这个英文名字我在初中就开始用了，记得当时Jenking好像有战神的意思？记不太清了，当然这并不重要，我现在许多软件的名字都用Jenking Gong，或许以后有身份有地位后这个名字会大放异彩，现在就不太可能了。&#xA;下礼拜周六师兄让我做做凝胶？好像是这个东西，记不太清了，到时候再说吧。实验室的氛围还是相当不错的，比较友好和平和。但是到现在还没见到导师，一直都是微信联系，笑死我了。&#xA;哦对了，顺便又开发了一个关于富集分析的小程序，主要就是GO和KEGG，当然是比较慢的，但是操作比较简单。&#xA;今天就先这样吧。</description>
+    </item>
+  </channel>
+</rss>

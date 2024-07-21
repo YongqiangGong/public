@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=443&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TCGA：快速下载Counts矩阵数据 | The academic website of Yongqiang Gong</title>
+    <link rel="stylesheet" href="../../../../../css/style.css" />
+    <link rel="stylesheet" href="../../../../../css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="../../../../../">Home</a></li>
+      
+      <li><a href="../../../../../about/">Tools</a></li>
+      
+      <li><a href="../../../../../categories/">Categories</a></li>
+      
+      <li><a href="../../../../../tags/">Tags</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">TCGA：快速下载Counts矩阵数据</span></h1>
+<h2 class="author">Jenking Gong</h2>
+<h2 class="date">2024/07/03</h2>
+</div>
+
+<main>
+<hr>
+<h3 id="好久不见了各位朋友有没有想念jenking呢jenking最近在忙着考试的事情的确没有太多的时间但是接下来一阵子就会比较空闲了争取每天更新">好久不见了，各位朋友！有没有想念Jenking呢？Jenking最近在忙着考试的事情，的确没有太多的时间，但是接下来一阵子就会比较空闲了，争取每天更新！</h3>
+<hr>
+<h4 id="接下来的几期内容是关于如何下载tcga数据并进行简单整理的jenking写了几个简单的函数大家可以直接在自己的项目里面用当然也借鉴了其他一些大佬们的代码">接下来的几期内容是关于如何下载TCGA数据并进行简单整理的，Jenking写了几个简单的函数，大家可以直接在自己的项目里面用，当然也借鉴了其他一些大佬们的代码。</h4>
+<hr>
+<h4 id="让我们开始正题吧首先加载我们写好的函数">让我们开始正题吧！首先加载我们写好的函数。</h4>
+<pre><code class="language-r">tcga_download &lt;- function(name){
+  x &lt;- str_c(&quot;TCGA-&quot;,name)
+  query_expr &lt;- TCGAbiolinks::GDCquery(project = x,
+                                       data.category = &quot;Transcriptome Profiling&quot;,
+                                       data.type = &quot;Gene Expression Quantification&quot;,
+                                       workflow.type = &quot;STAR - Counts&quot;
+  )
+  TCGAbiolinks::GDCdownload(query_expr)
+  expr &lt;- TCGAbiolinks::GDCprepare(query_expr)
+  se &lt;- expr
+  rowdata &lt;- SummarizedExperiment::rowData(se)
+  se_mrna &lt;- se[rowdata$gene_type == &quot;protein_coding&quot;,]
+  se_lnc &lt;- se[rowdata$gene_type == &quot;lncRNA&quot;]
+
+  mrna_counts &lt;- SummarizedExperiment::assay(se_mrna,&quot;unstranded&quot;)
+
+  lnc_counts &lt;- SummarizedExperiment::assay(se_lnc,&quot;unstranded&quot;)
+  mrna &lt;- SummarizedExperiment::rowData(se_mrna)$gene_name
+  lnc &lt;- SummarizedExperiment::rowData(se_lnc)$gene_name
+  symbol_mrna &lt;- data.frame(gene=mrna) %&gt;%
+    cbind(.,mrna_counts) %&gt;%
+    rownames_to_column(var = &quot;ensembl&quot;) %&gt;%
+    select(1:2)
+  symbol_lnc &lt;- data.frame(gene=lnc) %&gt;%
+    cbind(.,lnc_counts) %&gt;%
+    rownames_to_column(var = &quot;ensembl&quot;) %&gt;%
+    select(1:2)
+  message(&quot;矩阵下载成功！(nkyqgong)&quot;)
+  expr_data &lt;- list(mrna=mrna_counts,lnc=lnc_counts,symbol_lnc=symbol_lnc,symbol_mrna=symbol_mrna)
+  return(expr_data)
+}
+</code></pre>
+<h4 id="这个函数主要用于下载tcga数据的counts类型主要是lncrna和mrna并且已经把对应的基因id放到了里面后续另外一个函数能够直接进行匹配我们下次再说">这个函数主要用于下载TCGA数据的Counts类型，主要是LncRNA和mRNA，并且已经把对应的基因ID放到了里面，后续另外一个函数能够直接进行匹配，我们下次再说！</h4>
+<hr>
+<h4 id="我们直接把自己想要研究的项目名称写进去就可以比如乳腺癌就写brca示例如下">我们直接把自己想要研究的项目名称写进去就可以，比如乳腺癌就写BRCA。示例如下。</h4>
+<pre><code class="language-r">library(tidyverse)
+
+project &lt;- &quot;BRCA&quot;
+counts &lt;- tcga_download(project)
+</code></pre>
+<h4 id="运行后我们静静等待结果就好是不是很简单呢如果提醒你缺少哪些r包的话大家按需安装即可如果大家实在不能解决的话发送问题到后台看到的话我会回复大家">运行后，我们静静等待结果就好，是不是很简单呢？如果提醒你缺少哪些R包的话，大家按需安装即可。如果大家实在不能解决的话，发送问题到后台，看到的话我会回复大家！</h4>
+
+</main>
+
+  <footer>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<script src="//cdn.jsdelivr.net/combine/npm/katex/dist/katex.min.js,npm/katex/dist/contrib/auto-render.min.js,npm/@xiee/utils/js/render-katex.js" defer></script>
+
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
+
+  
+  <hr/>
+  © <a href="https://github.com/YongqiangGong/figures/blob/5b3c996d061adef3e2f1320440bd7b5eb3e66b8d/Yongqiang%20Gong.jpg">Yongqiang Gong</a> 2024 &ndash; 2024 | <a href="https://github.com/YongqiangGong">Github</a> | <a href="mailto:2796595606@qq.com">QQ</a> | <a href="https://github.com/YongqiangGong/figures/blob/a017ff91f94739f498027858f57a6cf9f287fb41/WeChat.jpg">WeChat</a>|<a href="mailto:gongyq@mail.nankai.edu.cn">Email</a>
+  
+  </footer>
+  </body>
+</html>
+
